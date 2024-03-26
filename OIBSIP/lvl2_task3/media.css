@@ -1,0 +1,88 @@
+@media screen and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 50px;
+    }
+
+    .add-task {
+        width: 700px;
+    }
+
+    .pending, .completed {
+        width: 80%;
+        height: fit-content;
+        margin: 0;
+    }
+
+    .pending-task-ctn, .completed-task-ctn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .completed {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .pending, .completed {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .pending, main .completed {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .add-task {
+        width: 80%;
+    }
+
+    main .pending, main .completed {
+        width: 80%;
+    }
+
+    .pending-task-ctn, .completed-task-ctn {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .add-task {
+        width: 90%;
+    }
+
+    main .pending, main .completed {
+        width: 90%;
+    }
+
+    .pending-task-ctn, .completed-task-ctn {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .nav-right {
+        display: none;
+    }
+
+    main .nav-right {
+        display: flex;
+        margin: 0;
+
+        width: 90%;
+    }
+
+    main .nav-right .nav-right-det-ctn .greetings {
+        text-align: left;
+    }
+}
