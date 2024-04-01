@@ -1,13 +1,3 @@
-/*const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-for(let i = 0; i < Math.floor(myNumbers.length / 2); i++ ) {
-    const temp = myNumbers[i]
-    myNumbers[i] = myNumbers[myNumbers.length - 1 - i]
-    myNumbers[myNumbers.length - 1 - i] = temp
-}
-
-console.log(myNumbers)*/
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import {
   getAuth,
@@ -19,7 +9,7 @@ import {
   set,
 } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-// Your web app's Firebase configuration
+//Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBsUA6-jOnae8uXuEvM4mUQZ4752Rs0eQY",
   authDomain: "intern-17ec9.firebaseapp.com",
@@ -30,13 +20,13 @@ const firebaseConfig = {
   appId: "1:408542557356:web:213d8b922f7c28f23a9b09",
 };
 
-// Initialize Firebase
+//Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Authentication
+//Initialize Authentication
 const auth = getAuth(app);
 
-// Initialize Realtime Database
+//Initialize Realtime Database
 const database = getDatabase(app);
 
 function validateForm() {
@@ -138,6 +128,7 @@ submitForm();
 
 function signInUser(email, password) {
   const errorMessageContainer = document.querySelector(".error-msg");
+  const submitButton = document.querySelector(".submit-btn");
 
   const hashedPassword = md5(password);
 
@@ -154,15 +145,19 @@ function signInUser(email, password) {
         window.location.href = "/secured-page/index.html";
       }, 1700);
 
-      console.log("user-exist");
+      //console.log("user-exist");
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
 
-      errorMessageContainer.innerHTML = "Invalid Email or password";
+      submitButton.value = "LOGIN";
 
-      console.error(errorMessage);
+      if (error.code === "auth/invalid-credential") {
+        errorMessageContainer.innerHTML = "Invalid Email or password";
+      }
+
+      //console.error(errorMessage);
     });
 }
 

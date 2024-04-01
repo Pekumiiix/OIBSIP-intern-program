@@ -1,403 +1,407 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
 nav {
-    width: 100%;
-    height: 90px;
-    background-color: white;
-    border-width: 0px 0px 0.52px 0px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.1);
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  border-width: 0px 0px 0.52px 0px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.1);
 
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-left {
-    margin-left: 20px;
+  margin-left: 20px;
 
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.nav-left img, .nav-right img {
-    height: 50px;
-    width: 50px;
+.nav-left img,
+.nav-right img {
+  height: 50px;
+  width: 50px;
 }
 
 .nav-left p {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .nav-right {
-    margin-right: 20px;
+  margin-right: 20px;
 
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-right-det-ctn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .greetings {
-    font-size: 13px;
-    color: #292D32;
-    opacity: 50%;
-    font-weight: 400;
+  font-size: 13px;
+  color: #292d32;
+  opacity: 50%;
+  font-weight: 400;
 
-    text-align: right;
+  text-align: right;
 }
 
 main {
-    width: 100%;
-    margin-top: 55px;
+  width: 100%;
+  margin-top: 55px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .add-task {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
-    border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
+  border-radius: 8px;
 
-    width: 450px;
-    height: fit-content;
-    background-color: white;
-    padding: 30px 20px;
+  width: 450px;
+  height: fit-content;
+  background-color: white;
+  padding: 30px 20px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.add-task input, .priority {
-    width: 100%;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 18px;
+.add-task input,
+.priority {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
-    border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
+  border-radius: 8px;
 
-    outline: none;
+  outline: none;
 }
 
 .priority-list {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .caret-down {
-    position: absolute;
-    right: 20px;
-    top: 11px;
+  position: absolute;
+  right: 20px;
+  top: 11px;
 
-    font-size: 20px;
+  font-size: 20px;
 
-    transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .caret-down.active {
-    transform: translateY(0%) rotate(180deg);
+  transform: translateY(0%) rotate(180deg);
 }
 
 .drop-down-menu {
-    display: none;
-    flex-direction: column;
+  display: none;
+  flex-direction: column;
 
-    width: 100%;
-    height: fit-content;
+  width: 100%;
+  height: fit-content;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
-    border-radius: 8px;
-    border-radius: 0px 0px 8px 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
+  border-radius: 8px;
+  border-radius: 0px 0px 8px 8px;
 
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .drop-down-menu.active {
-    display: flex;
+  display: flex;
 }
 
 .drop-down-menu button {
-    padding: 10px;
-    width: 100%;
-    height: 35px;
-    background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
 
-    border-width: 0px 0px 1px 0px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
 
-    text-align: left;
+  text-align: left;
 
-    outline: none;
+  outline: none;
 }
 
 .drop-down-menu button:hover {
-    background-color: rgba(211, 211, 211, 0.3);
+  background-color: rgba(211, 211, 211, 0.3);
 }
 
 .add-task textarea {
-    width: 100%;
-    height: 250px;
-    padding: 10px;
-    font-size: 18px;
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  font-size: 18px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
-    border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
+  border-radius: 8px;
 
-    outline: none;
+  outline: none;
 }
 
 .input.error {
-    border-color: rgba(255, 0, 0, 0.5);
+  border-color: rgba(255, 0, 0, 0.5);
 }
 
 .input.success {
-    border-color: rgba(0, 128, 0, 0.5);
+  border-color: rgba(0, 128, 0, 0.5);
 }
 
 .add-task .save-btn {
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    background-color: rgba(17, 203, 36, 1);
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgba(17, 203, 36, 1);
 
-    color: white;
-    font-weight: 600;
+  color: white;
+  font-weight: 600;
 
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 main .nav-right {
-    display: none;
+  display: none;
 }
 
-.pending, .completed {
-    width: 350px;
-    height: fit-content;
+.pending,
+.completed {
+  width: 350px;
+  height: fit-content;
 
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.pending-task-ctn, .completed-task-ctn {
-    display: flex;
-    flex-direction: column;
+.pending-task-ctn,
+.completed-task-ctn {
+  display: flex;
+  flex-direction: column;
 
-    gap: 20px;
+  gap: 20px;
 }
 
 .section-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .pending-color {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 
-    background-color: rgba(255, 199, 0, 1);
+  background-color: rgba(255, 199, 0, 1);
 }
 
 .section-header p {
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .task {
-    width: 100%;
-    padding: 20px 20px;
+  width: 100%;
+  padding: 20px 20px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
-    border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
+  border-radius: 8px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .task img {
-    width: 100%;
-    height: 150px;
+  width: 100%;
+  height: 150px;
 }
 
 .task-det-ctn {
-    width: 100%;
+  width: 100%;
 
-    border-width: 0px 0px 0.52px 0px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.1);
+  border-width: 0px 0px 0.52px 0px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.1);
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .task-det-ctn span {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .other-details {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 
-    align-items: center;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.other-details img{
-    width: 30px;
-    height: 30px;
+.other-details img {
+  width: 30px;
+  height: 30px;
 }
 
 .other-details p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .priority-level {
-    padding: 10px;
-    border-radius: 4px;
-    width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+  width: fit-content;
 
-    font-size: 12px;
-    font-weight: 400;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .Low-priority {
-    background-color: rgba(253, 241, 136, 0.3);
+  background-color: rgba(253, 241, 136, 0.3);
 }
 
 .Medium-priority {
-    background-color: rgba(215, 250, 214, 0.3);
+  background-color: rgba(215, 250, 214, 0.3);
 }
 
 .High-priority {
-    background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .task-title {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 20.52px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20.52px;
 }
 
 .task-description {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17.52px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.52px;
 
-    color: rgba(115, 119, 124, 1);
+  color: rgba(115, 119, 124, 1);
 }
 
-.task-title.editable, .task-description.editable {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(41, 45, 50, 0.2);
-    border-radius: 4px;
-    padding: 7px;
+.task-title.editable,
+.task-description.editable {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(41, 45, 50, 0.2);
+  border-radius: 4px;
+  padding: 7px;
 
-    outline: none;
+  outline: none;
 }
 
 .button-ctn {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .finished-btn {
-    padding: 7px;
-    border: none;
-    outline: none;
-    background-color: rgba(17, 203, 36, 0.8);
-    border-radius: 7px;
+  padding: 7px;
+  border: none;
+  outline: none;
+  background-color: rgba(17, 203, 36, 0.8);
+  border-radius: 7px;
 
-    color: white;
-    font-size: 14px;
+  color: white;
+  font-size: 14px;
 }
 
 .other-btn {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 
-    /*font-size: 23px;*/
+  /*font-size: 23px;*/
 }
 
 .other-btn button {
-    padding: 7px 9px;
-    border-radius: 3px;
+  padding: 7px 9px;
+  border-radius: 3px;
 
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 .edit-btn {
-    color: blue;
-    background-color: rgba(0,0,255, 0.1);
+  color: blue;
+  background-color: rgba(0, 0, 255, 0.1);
 }
 
 .delete-btn {
-    color: red;
-    background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
 .completed-color {
-    background: rgba(17, 203, 36, 1);
+  background: rgba(17, 203, 36, 1);
 
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
 }
 
 .completed .task .button-ctn {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }

@@ -1,185 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/Vector.svg" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="media.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/Vector.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="media.css" />
     <script src="index.js" defer></script>
-    <script src="https://kit.fontawesome.com/d2685faf17.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d2685faf17.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Task Manager</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="nav-left">
-            <img src="img/Vector.svg" alt="logo">
-            <p>Task-It</p>
-        </div>
+      <div class="nav-left">
+        <img src="img/Vector.svg" alt="logo" />
+        <p>Task-It</p>
+      </div>
 
-        <div class="nav-right">
-            <div class="nav-right-det-ctn">
-                <p class="greetings">Welcome Back</p>
-                <p class="name">Johnson Kennedy</p>
-            </div>
-            <img src="img/Rectangle 7.png" alt="User profile picture">
+      <div class="nav-right">
+        <div class="nav-right-det-ctn">
+          <p class="greetings">Welcome Back</p>
+          <p class="name">Johnson Kennedy</p>
         </div>
+        <img src="img/Rectangle 7.png" alt="User profile picture" />
+      </div>
     </nav>
 
     <main>
-        <div class="nav-right">
-            <img src="img/Rectangle 7.png" alt="User profile picture">
-            <div class="nav-right-det-ctn">
-                <p class="greetings">Welcome Back</p>
-                <p class="name">Johnson Kennedy</p>
-            </div>
+      <div class="nav-right">
+        <img src="img/Rectangle 7.png" alt="User profile picture" />
+        <div class="nav-right-det-ctn">
+          <p class="greetings">Welcome Back</p>
+          <p class="name">Johnson Kennedy</p>
         </div>
-        
-        <div class="add-task">
-            <input type="text" placeholder="Title" class="input title-input">
+      </div>
 
-            <div class="priority-list">
-                <input type="text" placeholder="Priority" class="input priority-input" readonly>
+      <div class="add-task">
+        <input type="text" placeholder="Title" class="input title-input" />
 
-                <div class="caret-down">
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
+        <div class="priority-list">
+          <input
+            type="text"
+            placeholder="Priority"
+            class="input priority-input"
+            readonly
+          />
 
-                <div class="drop-down-menu">
-                    <button value="Low-priority" class="drop-down-list">Low priority</button>
-                    <button value="Medium-priority" class="drop-down-list">Medium priority</button>
-                    <button value="High-priority" class="drop-down-list">High priority</button>
-                </div>
-            </div>
+          <div class="caret-down">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
 
-            <textarea name="descripition" class="input" id="description" cols="30" rows="10" placeholder="Description"></textarea>
-
-            <button type="submit" class="save-btn">Save</button>
-        </div>
-        <!------------------Pending task container----------------------------->
-        <div class="pending">
-            <span class="section-header">
-                <div class="pending-color"></div>
-                <p>Pending</p>
-            </span>
-
-            <div class="pending-task-ctn">
-                <div class="task">
-                    <img src="img/Frame 1216400387.png" alt="Task Illustration">
-    
-                    <div class="task-det-ctn">
-                        <span>
-                            <p class="priority-level low-priority">Low priority</p>
-    
-                            <div class="other-details">
-                                <p class="alter-time">10:48am</p>
-                                <img src="img/Rectangle 7.png" alt="User profile picture">
-                            </div>
-                        </span>
-                        <!--<p class="priority-level low-priority">Low priority</p>-->
-                        <p class="task-title">User testing session</p>
-                        <p class="task-description">Join our exclusive testing session and be a vital part of refining the user experience.</p>
-                    </div>
-    
-                    <div class="button-ctn">
-                       <div class="finished-btn-ctn">
-                            <button class="finished-btn">Finished</button>
-                       </div>
-    
-                       <div class="other-btn">
-                            <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
-                       </div>
-                    </div>
-                </div>
-    
-                <div class="task">
-                    <img src="img/Frame 1216400387.png" alt="Task Illustration">
-    
-                    <div class="task-det-ctn">
-                        <span>
-                            <p class="priority-level low-priority">Low priority</p>
-    
-                            <div class="other-details">
-                                <p class="alter-time">10:48am</p>
-                                <img src="img/Rectangle 7.png" alt="User profile picture">
-                            </div>
-                        </span>
-                        <!--<p class="priority-level low-priority">Low priority</p>-->
-                        <p class="task-title">User testing session 21</p>
-                        <p class="task-description">Join our exclusive testing session and be a vital part of refining the user experience.</p>
-                    </div>
-    
-                    <div class="button-ctn">
-                       <button class="finished-btn">Finished</button>
-    
-                       <div class="other-btn">
-                            <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
-                       </div>
-                    </div>
-                </div>
-            </div>
+          <div class="drop-down-menu">
+            <button value="Low-priority" class="drop-down-list">
+              Low priority
+            </button>
+            <button value="Medium-priority" class="drop-down-list">
+              Medium priority
+            </button>
+            <button value="High-priority" class="drop-down-list">
+              High priority
+            </button>
+          </div>
         </div>
 
-        <div class="completed">
-            <span class="section-header">
-                <div class="completed-color"></div>
-                <p>Completed</p>
-            </span>
+        <textarea
+          name="descripition"
+          class="input"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Description"
+        ></textarea>
 
-            <div class="completed-task-ctn">
-                <div class="task">
-                    <img src="img/Frame 1216400387.png" alt="Task Illustration">
-    
-                    <div class="task-det-ctn">
-                        <span>
-                            <p class="priority-level low-priority">Low priority</p>
-    
-                            <div class="other-details">
-                                <p class="alter-time">10:48am</p>
-                                <img src="img/Rectangle 7.png" alt="User profile picture">
-                            </div>
-                        </span>
-                        <!--<p class="priority-level low-priority">Low priority</p>-->
-                        <p class="task-title">User testing session</p>
-                        <p class="task-description">Join our exclusive testing session and be a vital part of refining the user experience.</p>
-                    </div>
-    
-                    <div class="button-ctn">
-                       <div class="other-btn">
-                            <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
-                       </div>
-                    </div>
+        <button type="submit" class="save-btn">Save</button>
+      </div>
+      <!------------------Pending task container----------------------------->
+      <div class="pending">
+        <span class="section-header">
+          <div class="pending-color"></div>
+          <p>Pending</p>
+        </span>
+
+        <div class="pending-task-ctn">
+          <div class="task">
+            <img src="img/Frame 1216400387.png" alt="Task Illustration" />
+
+            <div class="task-det-ctn">
+              <span>
+                <p class="priority-level Low-priority">Low priority</p>
+
+                <div class="other-details">
+                  <p class="alter-time">10:48am</p>
+                  <img src="img/Rectangle 7.png" alt="User profile picture" />
                 </div>
-    
-                <div class="task">
-                    <img src="img/Frame 1216400387.png" alt="Task Illustration">
-    
-                    <div class="task-det-ctn">
-                        <span>
-                            <p class="priority-level low-priority">Low priority</p>
-    
-                            <div class="other-details">
-                                <p class="alter-time">10:48am</p>
-                                <img src="img/Rectangle 7.png" alt="User profile picture">
-                            </div>
-                        </span>
-                        <!--<p class="priority-level low-priority">Low priority</p>-->
-                        <p class="task-title">User testing session</p>
-                        <p class="task-description">Join our exclusive testing session and be a vital part of refining the user experience.</p>
-                    </div>
-    
-                    <div class="button-ctn">
-                       <div class="other-btn">
-                            <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
-                       </div>
-                    </div>
-                </div>
+              </span>
+              <!--<p class="priority-level low-priority">Low priority</p>-->
+              <p class="task-title">User testing session</p>
+              <p class="task-description">
+                Join our exclusive testing session and be a vital part of
+                refining the user experience.
+              </p>
             </div>
+
+            <div class="button-ctn">
+              <div class="finished-btn-ctn">
+                <button class="finished-btn">Finished</button>
+              </div>
+
+              <div class="other-btn">
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task">
+            <img src="img/Frame 1216400387.png" alt="Task Illustration" />
+
+            <div class="task-det-ctn">
+              <span>
+                <p class="priority-level Low-priority">Low priority</p>
+
+                <div class="other-details">
+                  <p class="alter-time">10:48am</p>
+                  <img src="img/Rectangle 7.png" alt="User profile picture" />
+                </div>
+              </span>
+              <!--<p class="priority-level low-priority">Low priority</p>-->
+              <p class="task-title">User testing session 21</p>
+              <p class="task-description">
+                Join our exclusive testing session and be a vital part of
+                refining the user experience.
+              </p>
+            </div>
+
+            <div class="button-ctn">
+              <button class="finished-btn">Finished</button>
+
+              <div class="other-btn">
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="completed">
+        <span class="section-header">
+          <div class="completed-color"></div>
+          <p>Completed</p>
+        </span>
+
+        <div class="completed-task-ctn">
+          <div class="task">
+            <img src="img/Frame 1216400387.png" alt="Task Illustration" />
+
+            <div class="task-det-ctn">
+              <span>
+                <p class="priority-level Low-priority">Low priority</p>
+
+                <div class="other-details">
+                  <p class="alter-time">10:48am</p>
+                  <img src="img/Rectangle 7.png" alt="User profile picture" />
+                </div>
+              </span>
+              <!--<p class="priority-level low-priority">Low priority</p>-->
+              <p class="task-title">User testing session</p>
+              <p class="task-description">
+                Join our exclusive testing session and be a vital part of
+                refining the user experience.
+              </p>
+            </div>
+
+            <div class="button-ctn">
+              <div class="other-btn">
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task">
+            <img src="img/Frame 1216400387.png" alt="Task Illustration" />
+
+            <div class="task-det-ctn">
+              <span>
+                <p class="priority-level Low-priority">Low priority</p>
+
+                <div class="other-details">
+                  <p class="alter-time">10:48am</p>
+                  <img src="img/Rectangle 7.png" alt="User profile picture" />
+                </div>
+              </span>
+              <!--<p class="priority-level low-priority">Low priority</p>-->
+              <p class="task-title">User testing session</p>
+              <p class="task-description">
+                Join our exclusive testing session and be a vital part of
+                refining the user experience.
+              </p>
+            </div>
+
+            <div class="button-ctn">
+              <div class="other-btn">
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

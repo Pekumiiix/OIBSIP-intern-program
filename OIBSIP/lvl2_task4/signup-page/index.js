@@ -10,7 +10,7 @@ import {
   set,
 } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-// Your web app's Firebase configuration
+//Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBsUA6-jOnae8uXuEvM4mUQZ4752Rs0eQY",
   authDomain: "intern-17ec9.firebaseapp.com",
@@ -21,13 +21,13 @@ const firebaseConfig = {
   appId: "1:408542557356:web:213d8b922f7c28f23a9b09",
 };
 
-// Initialize Firebase
+//Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Authentication
+//Initialize Authentication
 const auth = getAuth(app);
 
-// Initialize Realtime Database
+//Initialize Realtime Database
 const database = getDatabase(app);
 
 function validateForm() {
@@ -149,9 +149,9 @@ function submitForm() {
 
       registerNewUser(email, password);
 
-      // console.log('form is valid')
+      //console.log('form is valid')
     } else {
-      // console.log('form is not valid')
+      //console.log('form is not valid')
     }
   });
 }
@@ -159,6 +159,9 @@ function submitForm() {
 submitForm();
 
 function registerNewUser(email, password) {
+  const submitButton = document.querySelector(".submit-btn");
+  const errorMessageContainer = document.querySelector(".error-msg");
+  const inputs = document.querySelectorAll(".input");
   const hashedPassword = md5(password);
 
   createUserWithEmailAndPassword(auth, email, hashedPassword)
@@ -170,7 +173,9 @@ function registerNewUser(email, password) {
       }).then(() => {
         showPopUp();
 
-        // Redirect user after user data is stored in the database
+        errorMessageContainer.innerHTML = "";
+
+        //Redirect user after user data is stored in the database
         setTimeout(() => {
           window.location.href = "/login-page/index.html";
         }, 1200);
@@ -181,17 +186,28 @@ function registerNewUser(email, password) {
       const errorCode = error.code;
       const errorMessage = error.message;
 
-      // console.log(errorMessage)
+      submitButton.value = "SIGN UP";
+
+      if (error.code === "auth/email-already-in-use") {
+        errorMessageContainer.innerHTML = "User already exist";
+
+        inputs.forEach((input) => {
+          input.value = "";
+
+          input.classList.remove("success");
+          input.classList.remove("error");
+        });
+      }
+
+      //console.log(errorMessage);
     });
 }
 
 function showPopUp() {
   const inputs = document.querySelectorAll(".input");
   const popUp = document.querySelector(".pop-up");
-  //const popUpBar = document.querySelector('.bar')
 
   popUp.style.display = "flex";
-  //popUpBar.classList.add('active')
 
   inputs.forEach((input) => {
     input.value = "";
@@ -202,5 +218,5 @@ function showPopUp() {
   }, 1500);
 }
 
-const hashedValue = md5("yourStringToHash");
-console.log(hashedValue);
+/*const hashedValue = md5("password");
+console.log(hashedValue);*/
